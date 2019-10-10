@@ -201,6 +201,7 @@ class EscposDriver(Thread):
         self.queue.put((time.time(),task,data))
 
     def print_status(self,eprint):
+        return
         localips = ['0.0.0.0','127.0.0.1','127.0.1.1']
         hosting_ap = os.system('pgrep hostapd') == 0
         ssid = subprocess.check_output('iwconfig 2>&1 | grep \'ESSID:"\' | sed \'s/.*"\\(.*\\)"/\\1/\'', shell=True).rstrip()
