@@ -185,7 +185,7 @@ class Serial(Escpos):
 
     def _raw(self, msg):
         """ Print any command sent in raw format """
-        self.device.write(self.out_ep, msg, **self.write_kwargs)
+        self.device.write(msg)
 
 
     def __del__(self):
